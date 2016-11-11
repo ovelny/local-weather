@@ -4,20 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Local weather</title>
+
 	<link rel="stylesheet" href="https://npmcdn.com/tachyons@4.1.2/css/tachyons.min.css" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
 	<script defer src="config.js"></script>
 	<script defer src="script.js"></script>
 </head>
 
 <body class="bg-blue">
 
-	<h1 class=" f-subheadline helvetica white-80 tc">Hey there !</h1>
-	<h2 class=" f1 helvetica white-80 tc">Here is the weather of your current location.</h2>
+	<h1 class="f-subheadline helvetica white-80 tc">Hey there !</h1>
+	<h2 class="f1 helvetica white-80 tc">Here is the weather of your current location.</h2>
 
 	<div class="weather-info tc">
 		<i class="fa fa-cloud fa-5x white-80 weather-icon" aria-hidden="true"></i>
-		<h2 class="f1 helvetica white-80 weather-status-celsius">...</h2>
+		<h2 class="f1 helvetica white-80 weather-status">...</h2>
+		<button type="button">Fahrenheit</button>
 	</div>
 
 <h2 class="helvetica white-80 tc">Have a nice day !</h2>

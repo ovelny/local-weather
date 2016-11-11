@@ -17,7 +17,23 @@ $(document).ready(function() {
 			let tempFahren = Math.round(tempKelvin * 9 / 5 - 459.67);
 
 			// Display weather info in Celsius
-			$(".weather-status-celsius").html(tempCelsius + "°C <br>" + weather);
+			$(".weather-status").html(tempCelsius + "°C <br>" + weather);
+
+			// Toggle between Fahrenheit and Celsius on click
+			$("button").click(function() {
+				
+				$("button").toggleClass("Fahrenheit");
+
+				if ($("button").hasClass("Fahrenheit")) {
+                    $(".weather-status").html(tempFahren + "°F <br>" + weather);
+				}
+
+				else {
+					$(".weather-status").html(tempCelsius + "°C <br>" + weather);
+				}
+            });
+
+
 		});
 
 	});
