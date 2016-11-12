@@ -1,0 +1,72 @@
+.temp-switch {
+    position: relative; 
+    width: 135px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+    left: 46.5%;
+}
+.temp-switch-checkbox {
+    display: none;
+}
+.temp-switch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid #FFFFF; 
+    border-radius: 11px;
+}
+.temp-switch-inner {
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.temp-switch-inner:before, .temp-switch-inner:after {
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 54px; 
+    padding: 0; 
+    line-height: 54px;
+    font-size: 25px; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.temp-switch-inner:before {
+    content: "°C";
+    padding-right: 21px;
+    background-color: #C23451; 
+    color: #FFFFFF;
+}
+.temp-switch-inner:after {
+    content: "°F";
+    padding-right: 41px;
+    background-color: #35C48B; 
+    color: #FFFFFF;
+    text-align: right;
+}
+.temp-switch-switch {
+    display: block; 
+    width: 38px; 
+    margin: 8px;
+    background: #FFFFFF;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    right: 77px;
+    border: 2px solid #FFFFF; 
+    border-radius: 11px;
+    transition: all 0.3s ease-in 0s; 
+}
+.temp-switch-checkbox:checked + .temp-switch-label .temp-switch-inner {
+    margin-left: 0;
+}
+.temp-switch-checkbox:checked + .temp-switch-label .temp-switch-switch {
+    right: 0px; 
+}
+
+.wi {
+    font-size: 100px;
+}

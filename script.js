@@ -14,6 +14,7 @@ $(document).ready(function() {
 			
 			let weather = jsonWeather.weather[0].description
 			let icon = parseInt(jsonWeather.weather[0].icon)
+			console.log(icon)
 			let tempKelvin = jsonWeather.main.temp
 			let tempCelsius = Math.round(tempKelvin - 273.15)
 			let tempFahren = Math.round(tempKelvin * 9 / 5 - 459.67)
@@ -35,24 +36,31 @@ $(document).ready(function() {
 				}
             })
 
+			// Choose icon based on openweather's icon number
 			switch (icon) {
-
 				case 1:
-					$(".fa").addClass("fa-sun-o")
+					$(".wi").addClass("wi-day-sunny")
 					break
 				case 2:
 				case 3:
 				case 4:
-					$(".fa").addClass("fa-cloud")
+					$(".wi").addClass("wi-day-cloudy")
 					break
 				case 9:
+					$("wi").addClass("wi-day-showers")
+					break
 				case 10:
-					$(".fa").addClass("fa-tint")
+					$(".wi").addClass("wi-day-rain")
 					break
 				case 11:
-					$(".fa").addClass("fa-bolt")
+					$(".wi").addClass("wi-day-lightning")
+					break
+				case 13:
+					$(".wi").addClass("wi-day-snow")
+					break
 				case 50:
-					$(".fa").addClass("fa-bolt")
+					$(".wi").addClass("wi-day-fog")
+					break
 			}
 
 
