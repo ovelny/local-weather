@@ -15,13 +15,22 @@
 
 <body class="bg-blue">
 
-	<h1 class="f-subheadline helvetica white-80 tc">Hey there !</h1>
+	<h1 class="f-subheadline helvetica white-80 tc">Hi there !</h1>
 	<h2 class="f1 helvetica white-80 tc">Here is the weather of your current location.</h2>
 
 	<div class="weather-info tc">
 		<i class="fa fa-cloud fa-5x white-80 weather-icon" aria-hidden="true"></i>
 		<h2 class="f1 helvetica white-80 weather-status">...</h2>
-		<button type="button">Fahrenheit</button>
+		<!--<button type="button">Fahrenheit</button>-->
+
+
+		<div class="temp-switch">
+            <input type="checkbox" name="temp-switch" class="temp-switch-checkbox" id="temp-switch" checked>
+            <label class="temp-switch-label" for="temp-switch">
+                <span class="temp-switch-inner"></span>
+                <span class="temp-switch-switch"></span>
+            </label>
+        </div>
 	</div>
 
 <h2 class="helvetica white-80 tc">Have a nice day !</h2>

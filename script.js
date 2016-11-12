@@ -20,12 +20,12 @@ $(document).ready(function() {
 			$(".weather-status").html(tempCelsius + "°C <br>" + weather)
 
 			// Toggle between Fahrenheit and Celsius on click
-			$("button").click(function() {
+			$("#temp-switch").click(function() {
 				
-				$("button").toggleClass("Fahrenheit")
+				$(".temp-switch").toggleClass("Fahrenheit")
 
-				if ($("button").hasClass("Fahrenheit")) {
-                    $(".weather-status").html(tempFahren + "°F <br>" + weather)
+				if ($(".temp-switch").hasClass("Fahrenheit")) {
+					$(".weather-status").html(tempFahren + "°F <br>" + weather)
 				}
 
 				else {
