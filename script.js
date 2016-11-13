@@ -1,15 +1,15 @@
 "use strict";
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	// Get city and country code from ip-api
-	$.get('http://ip-api.com/json', function(jsonGeoLoc) {
+	$.get('http://ip-api.com/json', function (jsonGeoLoc) {
 		let city = jsonGeoLoc.city
 		let countryCode = jsonGeoLoc.countryCode
 
 		// Get current weather with openweather API
-		$.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + countryCode + '&appid=' + apiKey, function(jsonWeather) {
-			
+		$.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + countryCode + '&appid=' + apiKey, function (jsonWeather) {
+
 			let weather = jsonWeather.weather[0].description
 			let icon = jsonWeather.weather[0].icon
 			let tempKelvin = jsonWeather.main.temp
@@ -21,18 +21,16 @@ $(document).ready(function() {
 			$(".weather-description").html(weather)
 
 			// Toggle between Fahrenheit and Celsius on click
-			$("#temp-switch").click(function() {
-				
+			$("#temp-switch").click(function () {
+
 				$(".temp-switch").toggleClass("Fahrenheit")
 
 				if ($(".temp-switch").hasClass("Fahrenheit")) {
 					$(".weather-temp").html(tempFahren + "°F")
-				}
-
-				else {
+				} else {
 					$(".weather-temp").html(tempCelsius + "°C")
 				}
-            })
+			})
 
 			// Choose icon based on openweather's icon number
 			switch (icon) {
@@ -62,7 +60,7 @@ $(document).ready(function() {
 					$(".wi").addClass("wi-day-fog")
 					break
 
-				// Night icons
+					// Night icons
 				case "01n":
 					$(".wi").addClass("wi-night-sunny")
 					break
@@ -86,7 +84,7 @@ $(document).ready(function() {
 				case "50n":
 					$(".wi").addClass("wi-night-fog")
 					break
-				}
+			}
 
 			// Comments related to current weather
 			switch (icon) {
@@ -101,7 +99,7 @@ $(document).ready(function() {
 				case "03n":
 				case "04d":
 				case "04n":
-					$(".weather-comment").html("Have a nice day!")
+					$(".weather-comment").html("Everything's good!")
 					break
 				case "09d":
 				case "09n":
