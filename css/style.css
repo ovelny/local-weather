@@ -5,6 +5,7 @@
     -moz-user-select:none; 
     -ms-user-select: none;
     left: 46.5%;
+    margin-top: 30px;
 }
 .temp-switch-checkbox {
     display: none;
@@ -68,5 +69,24 @@
 }
 
 .wi {
+    float: right;
     font-size: 100px;
+    padding-top: 20px;
+    margin: 0px 25px;
+}
+.weather-temp {
+    float: left;
+    margin: 45px 25px;
+}
+
+.weather-description {
+    margin: 10px 0px;
+}
+
+.weather-comment {
+    margin-top : 30px;
+}
+
+.w-50 {
+    height: 120px;
 }
