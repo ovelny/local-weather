@@ -9,8 +9,6 @@ $(document).ready(function() {
 
 		// Get current weather with openweather API
 		$.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + countryCode + '&appid=' + apiKey, function(jsonWeather) {
-			console.log(jsonWeather)
-			console.log(jsonWeather.weather[0].icon)
 			
 			let weather = jsonWeather.weather[0].description
 			let icon = jsonWeather.weather[0].icon
